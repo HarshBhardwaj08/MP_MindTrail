@@ -1,0 +1,188 @@
+{
+  "Questions": [
+    {
+      "question_id": 1,
+      "question": "What is the capital of France?",
+      "correct_option_id": 3,
+      "answers": [
+        {
+          "option_id": 1,
+          "option": "A) Berlin"
+        },
+        {
+          "option_id": 2,
+          "option": "B) Madrid"
+        },
+        {
+          "option_id": 3,
+          "option": "C) Paris"
+        },
+        {
+          "option_id": 4,
+          "option": "D) Rome"
+        }
+      ]
+    },
+    {
+      "question_id": 2,
+      "question": "Which planet is the red planet?",
+      "correct_option_id": 2,
+      "answers": [
+        {
+          "option_id": 1,
+          "option": "A) Jupiter"
+        },
+        {
+          "option_id": 2,
+          "option": "B) Mars"
+        },
+        {
+          "option_id": 3,
+          "option": "C) Earth"
+        },
+        {
+          "option_id": 4,
+          "option": "D) Venus"
+        }
+      ]
+    },
+    {
+      "question_id": 3,
+      "question": "What is the largest mammal on Earth?",
+      "correct_option_id": 1,
+      "answers": [
+        {
+          "option_id": 1,
+          "option": "A) Blue Whale"
+        },
+        {
+          "option_id": 2,
+          "option": "B) Elephant"
+        },
+        {
+          "option_id": 3,
+          "option": "C) Hippopotamus"
+        },
+        {
+          "option_id": 4,
+          "option": "D) Giraffe"
+        }
+      ]
+    },
+    {
+      "question_id": 4,
+      "question": "Who wrote the play 'Romeo and Juliet'?",
+      "correct_option_id": 4,
+      "answers": [
+        {
+          "option_id": 1,
+          "option": "A) Jane Austen"
+        },
+        {
+          "option_id": 2,
+          "option": "B) Mark Twain"
+        },
+        {
+          "option_id": 3,
+          "option": "C) Charles Dickens"
+        },
+        {
+          "option_id": 4,
+          "option": "D) William Shakespeare"
+        }
+      ]
+    },
+    {
+      "question_id": 5,
+      "question": "Which element has the chemical symbol 'O'?",
+      "correct_option_id": 1,
+      "answers": [
+        {
+          "option_id": 1,
+          "option": "A) Oxygen"
+        },
+        {
+          "option_id": 2,
+          "option": "B) Gold"
+        },
+        {
+          "option_id": 3,
+          "option": "C) Silver"
+        },
+        {
+          "option_id": 4,
+          "option": "D) Hydrogen"
+        }
+      ]
+    },
+    {
+      "question_id": 6,
+      "question": "In which year did the Titanic sink?",
+      "correct_option_id": 2,
+      "answers": [
+        {
+          "option_id": 1,
+          "option": "A) 1905"
+        },
+        {
+          "option_id": 2,
+          "option": "B) 1912"
+        },
+        {
+          "option_id": 3,
+          "option": "C) 1920"
+        },
+        {
+          "option_id": 4,
+          "option": "D) 1935"
+        }
+      ]
+    },
+    {
+      "question_id": 7,
+      "question": "What is the smallest prime number?",
+      "correct_option_id": 4,
+      "answers": [
+        {
+          "option_id": 1,
+          "option": "A) 3"
+        },
+        {
+          "option_id": 2,
+          "option": "B) 5"
+        },
+        {
+          "option_id": 3,
+          "option": "C) 1"
+        },
+        {
+          "option_id": 4,
+          "option": "D) 2 "
+        }
+      ]
+    },
+    {
+      "question_id": 8,
+      "question": "Which of the following is a primary color?",
+      "correct_option_id": 3,
+      "answers": [
+        {
+          "option_id": 1,
+          "option": "A) Yellow"
+        },
+        {
+          "option_id": 2,
+          "option": "B) Green"
+        },
+        {
+          "option_id": 3,
+          "option": "C) Red"
+        },
+        {
+          "option_id": 4,
+          "option": "D) Purple"
+        }
+      ]
+    }
+  ]
+}

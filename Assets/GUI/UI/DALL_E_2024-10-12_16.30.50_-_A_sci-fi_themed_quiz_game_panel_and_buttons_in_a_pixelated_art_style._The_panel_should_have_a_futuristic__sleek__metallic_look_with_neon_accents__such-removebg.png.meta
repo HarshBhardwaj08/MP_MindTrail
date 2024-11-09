@@ -1,0 +1,646 @@
+fileFormatVersion: 2
+guid: 9811fdd0febeb4748bd50090beaa38eb
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_0
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 596
+        width: 553
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b729f8da1b7bfc4cacfd1c8280603ab
+      internalID: 430556788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 394
+        width: 99
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1faca43c94eaa554a8580da6adc6b71d
+      internalID: -2099998772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_2
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 394
+        width: 98
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5526b15a56c05140b49fdb24be15c0c
+      internalID: 875830271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_3
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 394
+        width: 98
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7bda979097bcc49a67f4570a504d8f
+      internalID: 1309977560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_4
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 394
+        width: 98
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bc9647b5f63595429ada50d2ec1e759
+      internalID: -1756730539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_5
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 374
+        width: 111
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78aa567c8fbf43a4c9e7fd7d222a83c7
+      internalID: -975241923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_6
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 374
+        width: 113
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7046e2f7d655245813b5729da8ab97
+      internalID: 424047460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_7
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 374
+        width: 110
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b1595b29c4b8647bdea7d4d8c63711
+      internalID: -1725773109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_8
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 374
+        width: 100
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69d731a8678498940868f231317f3a0b
+      internalID: -322046277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_9
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 279
+        width: 99
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a7d352615a1b1468cfd46773072b00
+      internalID: 1175824319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_10
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 279
+        width: 99
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b443eab7101a7408192c383ccd298e
+      internalID: -2111772137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_11
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 279
+        width: 98
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7272b3abe9ebea84fbde10babfc45a7b
+      internalID: -1956386051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_12
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 278
+        width: 98
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347acd6084e4f404a9078945e1bcdd84
+      internalID: -1230255557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_13
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 42
+        width: 525
+        height: 310
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e6dcb7748be034db04a25dd37bab05
+      internalID: 1105013111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_14
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 168
+        width: 99
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc95c3172b93ac488c37f125b50f430
+      internalID: -1170232881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_15
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 168
+        width: 97
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1039f717febe7743bfa8a0622e0db3e
+      internalID: 1537028573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_16
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 168
+        width: 98
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9668fa1ed19cf8d4a80b77169fc9ac84
+      internalID: -1922844989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_17
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 167
+        width: 97
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c49b85c1d048574481aab65e0b8433a
+      internalID: 2037940643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_18
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 53
+        width: 99
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a758bf3651787164fb8c3af248570c40
+      internalID: -36261520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_19
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 54
+        width: 98
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d7a880f22967e45bf15b30159f6076
+      internalID: -1618053355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_20
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 54
+        width: 98
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c3f4d02c7e8404b8261374f1230b50
+      internalID: 326546538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_21
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 54
+        width: 98
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbab5c5904b9606429f00ee12cb5a2a7
+      internalID: -22953036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_22
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 520
+        width: 566
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc98d7b66202ab4c8af3edb42d9bd5c
+      internalID: 1305339303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_0: 430556788
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_1: -2099998772
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_10: -2111772137
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_11: -1956386051
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_12: -1230255557
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_13: 1105013111
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_14: -1170232881
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_15: 1537028573
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_16: -1922844989
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_17: 2037940643
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_18: -36261520
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_19: -1618053355
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_2: 875830271
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_20: 326546538
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_21: -22953036
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_22: 1305339303
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_3: 1309977560
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_4: -1756730539
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_5: -975241923
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_6: 424047460
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_7: -1725773109
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_8: -322046277
+      DALL_E_2024-10-12_16.30.50_-_A_sci-fi_themed_quiz_game_panel_and_buttons_in_a_pixelated_art_style._The_panel_should_have_a_futuristic__sleek__metallic_look_with_neon_accents__such-removebg_9: 1175824319
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
