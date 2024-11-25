@@ -19,9 +19,10 @@ public class ApiCaller : MonoBehaviour
     public static string[][] apiData;  // 2D array for storing API data
    
   //  public static string rValue;  // URL parameter value for 'r'
-   public static string rValue = "EXhg%2f82oUP1rISTtKeUWRSThzsbzIWS4yUH3pOK%40%40%40%2f2YeZbKxfmb7FAbud2Cz3sfNoxGlGmAxBNO49Ouha6JD6Q%3d%3d";  // URL parameter value for 'r'
- //   public static string rValue = "hYxn%2fzZs0e3%2fw7hyhnD90g%3d%3d";  // URL parameter value for 'r'
+  // public static string rValue = "EXhg%2f82oUP1rISTtKeUWRSThzsbzIWS4yUH3pOK%40%40%40%2f2YeZbKxfmb7FAbud2Cz3sfNoxGlGmAxBNO49Ouha6JD6Q%3d%3d";  // URL parameter value for 'r'
+  public static string rValue = "hYxn%2fzZs0e3%2fw7hyhnD90g%3d%3d";  // URL parameter value for 'r'
   // public static string rValue = "We2BvG2a6hDlrlHuxuOdHcE6JM8Fgy3e";  // URL parameter value for 'r'
+  
     public float rating;  // Player rating retrieved from API
   //  [SerializeField] Text ratingText;
     #endregion

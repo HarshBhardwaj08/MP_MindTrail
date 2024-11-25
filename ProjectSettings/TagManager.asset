@@ -7,17 +7,18 @@ TagManager:
   - DataRetriver
   - GameManager
   - InteractableManager
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - GroundLayer
-  - 
-  - 
-  - 
+  - Ladder
+  - Enemy
+  - Bullet
   - 
   - 
   - 
