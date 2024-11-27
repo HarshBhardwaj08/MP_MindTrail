@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class TankBullets : MonoBehaviour
 {
-    private void Start()
+    public static event Action onBulletHit;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject,2.5f);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            onBulletHit?.Invoke();
+        }
+        Destroy(this.gameObject);
     }
 }

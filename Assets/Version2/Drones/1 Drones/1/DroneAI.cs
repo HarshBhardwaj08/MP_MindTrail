@@ -1,14 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DroneAI : MonoBehaviour
+public class DroneAI : EnemyBase
 {
     public Transform player;
     public float speed = 3f;
     public float detectionRadius = 5f;
     public float destroyRadius = 1f;
+    [SerializeField] private Explosion explosion;
+    public static event Action onDroneHit;
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+      //  Debug.Log(collision.gameObject.name);
+    }
+    private void Explode()
+    {
+        explosion.Explode();
+    }
+
+   
     void Update()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
@@ -22,18 +35,24 @@ public class DroneAI : MonoBehaviour
             // Check if close enough to destroy
             if (distanceToPlayer <= destroyRadius)
             {
-                DestroySelf();
+                onDroneHit?.Invoke();
+                Explode();
+                //DestroySelf();
             }
         }
     }
-
+    
     void DestroySelf()
     {
         // Add explosion effect or damage logic here
         Debug.Log("Drone destroyed near player!");
         Destroy(gameObject);
     }
-
+    public override void OnDamage()
+    {
+        Debug.Log(this.gameObject.name + "Damage Deducted");
+        Explode();
+    }
     void OnDrawGizmos()
     {
         // Draw detection radius

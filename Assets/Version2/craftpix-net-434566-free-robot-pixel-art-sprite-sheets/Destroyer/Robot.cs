@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Robot : MonoBehaviour
+using System;
+public class Robot : EnemyBase
 {
     public Transform player;
     public Transform[] patrolPoints;
@@ -20,7 +20,7 @@ public class Robot : MonoBehaviour
     private Animator animator;
     private bool isAttacking = false;
     private float lastAttackTime = -Mathf.Infinity;
-
+    public static event Action onRobotHit;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -48,13 +48,21 @@ public class Robot : MonoBehaviour
             Patrol();
         }
     }
-
+    public override void OnDamage()
+    {
+        Debug.Log(this.gameObject.name + "Damage Deducted");
+        animator.SetTrigger("Death");
+    }
+    public void DisableObject()
+    {
+        this.gameObject.SetActive(false);
+    }
     void Patrol()
     {
         if (patrolPoints.Length == 0) return;
 
         animator.SetBool("isWalking", true);
-        animator.SetBool("isAttacking", false);
+      //  animator.SetBool("isAttacking", false);
 
         Transform targetPoint = patrolPoints[currentPatrolIndex];
         MoveTowards(targetPoint.position, patrolSpeed);
@@ -81,11 +89,11 @@ public class Robot : MonoBehaviour
             isAttacking = true;
 
             // Randomly choose an attack animation
-            int attackType = Random.Range(0, 2); // 0 or 1
+            int attackType = UnityEngine.Random.Range(0, 2); // 0 or 1
             animator.SetTrigger(attackType == 0 ? "Attack1" : "Attack2");
 
             // Perform raycast after a slight delay to sync with animation
-       
+            PerformAttackRaycast();
             lastAttackTime = Time.time;
 
             Invoke(nameof(ResetAttack), 1f); // Adjust based on animation length
@@ -95,12 +103,12 @@ public class Robot : MonoBehaviour
     void PerformAttackRaycast()
     {
         // Cast a ray from the attack point
-        RaycastHit2D hit = Physics2D.Raycast(attackPoint.position, transform.right, attackRange, playerLayer);
-        if (hit.collider != null && hit.collider.CompareTag("Player"))
+        //RaycastHit2D hit = Physics2D.Raycast(attackPoint.position,transform.right, attackRange, playerLayer);
+        bool isplayerHit = Physics2D.OverlapCircle(attackPoint.position, attackRadius,playerLayer);
+        if (isplayerHit == true)
         {
-            Debug.Log("Player hit by AI attack!");
-           
-         
+          //  Debug.Log("Player hit by AI attack!");
+            onRobotHit?.Invoke();
         }
 
         // Debug visualization

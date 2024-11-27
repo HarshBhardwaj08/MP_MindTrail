@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : EnemyBase
 {
     [Header("Movement Settings")]
     public float moveSpeed = 2f; 
@@ -49,7 +49,15 @@ public class Enemy : MonoBehaviour
             animator.SetTrigger("Death");
         }
     }
-
+    public override void OnDamage()
+    {
+        Debug.Log("Damage Deducted");
+        animator.SetTrigger("Death");
+    }
+    public void DisableObject()
+    {
+        this.gameObject.SetActive(false);
+    }
     private void OnDisable()
     {
         Bullet.onBulletHit -= HurtEnemy;
@@ -117,7 +125,7 @@ public class Enemy : MonoBehaviour
         Vector2 fireballDirection = (player.position - fireballSpawnPoint.position).normalized;
        
         Rigidbody2D fireballRb = fireball.GetComponent<Rigidbody2D>();
-        fireballRb.AddForce(fireballDirection * fireballForce, ForceMode2D.Impulse);
+        fireballRb.AddForce(fireballDirection * fireballForce*Time.deltaTime, ForceMode2D.Impulse);
     }
 
     void SwordAttack()

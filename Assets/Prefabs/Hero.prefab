@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1578339096607874440}
   - component: {fileID: 5331267484232682451}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1089949918897340340}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.13, y: 0.12, z: 0}
+  m_LocalPosition: {x: 0.392, y: 0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3148579818942909318}
   - component: {fileID: 6916419015693614793}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GrdChkPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ Transform:
   m_GameObject: {fileID: 1518747928053229637}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.21, y: -1.07, z: 0}
+  m_LocalPosition: {x: -0.081, y: -0.377, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -105,9 +105,9 @@ GameObject:
   - component: {fileID: 4936636842630799219}
   - component: {fileID: 7206625629348674060}
   - component: {fileID: 968439179118818903}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hero
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,7 +123,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.45, y: -3.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3148579818942909318}
   - {fileID: 1578339096607874440}
@@ -254,13 +254,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1025fe748540a46a7039be3c497e7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 3
-  runSpeed: 6
-  jumpForce: 8
+  walkSpeed: 50
+  runSpeed: 80
+  jumpForce: 250
   climbSpeed: 4
   maxJumpCount: 1
   groundCheck: {fileID: 3148579818942909318}
-  groundCheckRadius: 0.2
+  groundCheckRadius: 0.1
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -269,7 +269,7 @@ MonoBehaviour:
     m_Bits: 128
   bullets: {fileID: 3982346145109601403, guid: 1dd3e45d561eee747852ec78ef1939fc, type: 3}
   bulletSpawnPoint: {fileID: 1578339096607874440}
-  bulletSpeed: 10
+  bulletSpeed: 100
   isGrounded: 0
   isFlip: 0
 --- !u!70 &968439179118818903
@@ -304,6 +304,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.1747837, y: 0.043695927}
-  m_Size: {x: 0.6758661, y: 2.1001081}
+  m_Offset: {x: -0.06, y: 0}
+  m_Size: {x: 0.17, y: 0.7}
   m_Direction: 0

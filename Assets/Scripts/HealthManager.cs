@@ -3,44 +3,65 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
-{  
-    
-    public GameObject[] health;
-    public int healthCount = 3;
-    [SerializeField] GameObject heartDecrease;
-    [SerializeField] AudioManager audioManager;
-    [SerializeField] ApiCaller apiCaller;
+{
+
+    public GameObject[] health; // Array of health GameObjects
+    public Sprite fullheart, halfhealth, emptyHealth; // Sprites for health states
+    public int healthCount = 6; // Total health
+    [SerializeField] private AudioManager audioManager; // Audio manager for sound effects
+    [SerializeField] private ApiCaller apiCaller; // API caller for saving data
+
     private void OnEnable()
     {
         QuestionIntilizers.healthDelegate += DecreaseHealth;
     }
+
     private void OnDisable()
     {
         QuestionIntilizers.healthDelegate -= DecreaseHealth;
     }
-    public  void DecreaseHealth()
-    {  
+
+    public void DecreaseHealth()
+    {
+        if (healthCount <= 0) return;
+
         healthCount--;
+
+        UpdateHealthDisplay(healthCount);
+
         if (healthCount <= 0)
         {
+            // Game over logic
             apiCaller.SaveDataToApi();
             GameManager.Instance.gameOverPanel.SetActive(true);
             GameManager.Instance.musicSound.Stop();
-
         }
-        health[healthCount].SetActive(false);
-        StartCoroutine(HeartDecrease());
+
+        audioManager.PlaySoundEffects(0);
     }
 
-    public IEnumerator HeartDecrease()
+    private void UpdateHealthDisplay(int healthcount)
     {
-        audioManager.PlaySoundEffects(0);
-        heartDecrease.SetActive(true);
-        yield return new WaitForSeconds(1f);
-        heartDecrease.SetActive(false);
-
-
+        for (int i = 0; i < health.Length; i++)
+        {
+            if (i < healthCount / 2) // Fully active hearts
+            {
+                health[i].GetComponent<Image>().sprite = fullheart;
+                health[i].SetActive(true);
+            }
+            else if (i == healthCount / 2 && healthCount % 2 != 0) // Half heart
+            {
+                health[i].GetComponent<Image>().sprite = halfhealth;
+                health[i].SetActive(true);
+            }
+            else // Empty hearts
+            {
+                health[i].GetComponent<Image>().sprite = emptyHealth;
+                health[i].SetActive(true);
+            }
+        }
     }
 }

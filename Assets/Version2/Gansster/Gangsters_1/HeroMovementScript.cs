@@ -27,7 +27,7 @@ public class HeroMovementScript : MonoBehaviour
     public Transform bulletSpawnPoint;
     public float bulletSpeed;
     private Rigidbody2D rb;
-    private Animator animator;
+    public Animator animator;
     public bool isGrounded;
     private bool isClimbing;
     private int jumpCount;
@@ -36,6 +36,7 @@ public class HeroMovementScript : MonoBehaviour
     private float verticalInput;
     private bool isrun;
     [SerializeField] private bool isFlip;
+    private bool isInvincible;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -44,11 +45,38 @@ public class HeroMovementScript : MonoBehaviour
     private void OnEnable()
     {
         FireBallScripts.onfireBallHit += PlayerHurt;
+        TankBullets.onBulletHit += PlayerDeath;
+        Robot.onRobotHit += PlayerDeath;
+        DroneAI.onDroneHit += PlayerDeath;
+        InvincibilityCells.cellPicked += Invincible;
+        MIne.onExplosion += PlayerDeath;
     }
+
+    private void Invincible(bool obj)
+    {
+        isInvincible = obj;
+    }
+
     private void OnDisable()
     {
         FireBallScripts.onfireBallHit -= PlayerHurt;
+        TankBullets.onBulletHit -= PlayerDeath;
+        Robot.onRobotHit -= PlayerDeath;
+        DroneAI.onDroneHit -= PlayerDeath;
+        InvincibilityCells.cellPicked -= Invincible;
+        MIne.onExplosion -= PlayerDeath;
     }
+
+    private void PlayerDeath()
+    { 
+        if(isInvincible == true)
+        {
+            return;
+        }
+        animator.SetTrigger("Death");
+
+    }
+
 
     private void PlayerHurt()
     {
@@ -75,7 +103,7 @@ public class HeroMovementScript : MonoBehaviour
 
         // Handle climbing
         HandleClimbing();
-
+      
         // Handle jump
         if (Input.GetButtonDown("Jump"))
         {
@@ -107,11 +135,8 @@ public class HeroMovementScript : MonoBehaviour
     void SpawnBullets()
     {
         GameObject Bullets = Instantiate(bullets, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-      bullets.transform.localScale = isFlip == true ? new Vector3(1f, 1f, 1f) : new Vector3(-1f, 1f, 1f);
-
-        Rigidbody2D fireballRb = Bullets.GetComponent<Rigidbody2D>();
-        fireballRb.AddForce(transform.forward * bulletSpeed*Time.deltaTime
-            , ForceMode2D.Impulse);
+        bullets.transform.localScale = isFlip == true ? new Vector3(1f, 1f, 1f) : new Vector3(-1f, 1f, 1f);
+        Bullets.GetComponent<Bullet>().speed = isFlip == true ? 10 : -10;
     }
     private void HandleMovement()
     {
@@ -134,7 +159,7 @@ public class HeroMovementScript : MonoBehaviour
             isClimbing = true;
            
             rb.gravityScale = 0; // Disable gravity while climbing
-            rb.velocity = new Vector2(rb.velocity.x, verticalInput * climbSpeed);
+            rb.velocity = new Vector2(rb.velocity.x, verticalInput * climbSpeed*Time.deltaTime);
         }
         else if (isClimbing && !onLadder)
         {
@@ -145,10 +170,10 @@ public class HeroMovementScript : MonoBehaviour
 
     private void HandleJump()
     {
-        if (isGrounded || jumpCount < maxJumpCount)
+        if (isGrounded == true|| jumpCount < maxJumpCount)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce*Time.deltaTime);
-            isJUmp = true;
+           
             jumpCount++;
         }
     }
@@ -157,7 +182,7 @@ public class HeroMovementScript : MonoBehaviour
     {
         animator.SetFloat("xSpeed", Mathf.Abs(horizontalInput));
      //   animator.SetBool("IsClimbing", isClimbing);
-        animator.SetBool("Jump", isJUmp);
+        animator.SetBool("Jump", !isGrounded);
         animator.SetFloat("yVelocity", rb.velocity.y);
        // animator.SetFloat("VerticalVelocity", rb.velocity.y);
         animator.SetBool("Run", Input.GetKey(KeyCode.LeftShift) && Mathf.Abs(horizontalInput) > 0);

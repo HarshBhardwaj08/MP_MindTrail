@@ -15,9 +15,7 @@ public class Tank : MonoBehaviour
 
     void Update()
     {
-        
-            ShootAtTarget();
-        
+        ShootAtTarget();
     }
 
     void ShootAtTarget()
@@ -37,11 +35,13 @@ public class Tank : MonoBehaviour
         if (projectilePrefab != null && firePoint != null)
         {
             GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+            
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
                 rb.velocity = firePoint.transform.right * -projectileSpeed;
             }
+            Destroy(projectile,3.0f);
         }
     }
 }

@@ -13,7 +13,7 @@ public class FireBallScripts : MonoBehaviour
         if (collision.gameObject.tag == "Player") ;
         {
             onfireBallHit?.Invoke();
+            Destroy(gameObject); // Destroy the fireball on collision
         }
-        Destroy(gameObject); // Destroy the fireball on collision
     }
 }

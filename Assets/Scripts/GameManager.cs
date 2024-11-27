@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] questionsArray;
     public List<GameObject>  rewards;
     public  PlayerController playerController;
-  
+    public HeroMovementScript heroMovementScript;
     [SerializeField] AudioManager audioManager;
     public Text timerText; // Assign this in the inspector
     public static float timeElapsed;
@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         OffQuestions();
+        
 
     }
     private void Start()
@@ -65,12 +66,15 @@ public class GameManager : MonoBehaviour
     {
         playerController.animator.enabled = true;
         playerController.enabled = true;
+        heroMovementScript.enabled = true;
     }
     public void DeactivatePlayerController()
     {
         playerController.animator.enabled = false;
        
         playerController.enabled = false;
+        heroMovementScript.enabled = false;
+       
     }
     private void OffQuestions()
     {
