@@ -23969,7 +23969,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7156080726264227712, guid: c15d668f3a1aa6640a6970c2566f4eab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.85
+      value: 8.55
       objectReference: {fileID: 0}
     - target: {fileID: 7156080726264227712, guid: c15d668f3a1aa6640a6970c2566f4eab, type: 3}
       propertyPath: m_LocalPosition.y
@@ -24025,7 +24025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7206625629348674060, guid: c15d668f3a1aa6640a6970c2566f4eab, type: 3}
       propertyPath: climbSpeed
-      value: 80
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7206625629348674060, guid: c15d668f3a1aa6640a6970c2566f4eab, type: 3}
       propertyPath: bulletSpeed
