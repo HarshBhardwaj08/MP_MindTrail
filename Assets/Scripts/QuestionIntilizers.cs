@@ -18,7 +18,7 @@ public class QuestionIntilizers : MonoBehaviour
     public Reward reward;
     public delegate void RewardDelegate(Reward reward);
     public static event RewardDelegate RewardIntiliazer;
-    public delegate void HealthDelegate();
+    public delegate void HealthDelegate(int val);
     public static event HealthDelegate healthDelegate;
     public static event Action DisableObject;
     string[] questionData;
@@ -124,7 +124,7 @@ public class QuestionIntilizers : MonoBehaviour
         {
         //    Debug.Log("Incorrect Answer!");
             isCorrect =false;
-            healthDelegate?.Invoke();
+            healthDelegate?.Invoke(1);
         }
 
 

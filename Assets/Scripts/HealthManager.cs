@@ -13,22 +13,30 @@ public class HealthManager : MonoBehaviour
     public int healthCount = 6; // Total health
     [SerializeField] private AudioManager audioManager; // Audio manager for sound effects
     [SerializeField] private ApiCaller apiCaller; // API caller for saving data
-
+    public static event Action OnHealthZero;
     private void OnEnable()
     {
         QuestionIntilizers.healthDelegate += DecreaseHealth;
+        HeroMovementScript.healthDelegate += DecreaseHealth;
+        HeaalthBooster.OnHealthPicked += IncreseHealth;
     }
 
     private void OnDisable()
     {
         QuestionIntilizers.healthDelegate -= DecreaseHealth;
+        HeroMovementScript.healthDelegate -= DecreaseHealth;
+        HeaalthBooster.OnHealthPicked -= IncreseHealth;
     }
 
-    public void DecreaseHealth()
+    public void DecreaseHealth(int val)
     {
-        if (healthCount <= 0) return;
+        if (healthCount <= 0)
+        {
+            OnHealthZero?.Invoke();
+            return;
+        }
 
-        healthCount--;
+        healthCount = healthCount - val;
 
         UpdateHealthDisplay(healthCount);
 
@@ -41,6 +49,15 @@ public class HealthManager : MonoBehaviour
         }
 
         audioManager.PlaySoundEffects(0);
+    }
+    public void IncreseHealth(int val)
+    {
+        if(healthCount >= 6)
+        {
+            return;
+        }
+        healthCount += val;
+        UpdateHealthDisplay(healthCount);
     }
 
     private void UpdateHealthDisplay(int healthcount)

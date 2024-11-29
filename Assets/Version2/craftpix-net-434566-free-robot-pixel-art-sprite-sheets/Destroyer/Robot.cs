@@ -20,9 +20,11 @@ public class Robot : EnemyBase
     private Animator animator;
     private bool isAttacking = false;
     private float lastAttackTime = -Mathf.Infinity;
-    public static event Action onRobotHit;
+    public static event Action<int> onRobotHit;
+    
     void Start()
     {
+        healthPickup.SetActive(false);
         animator = GetComponent<Animator>();
         if (patrolPoints.Length > 0)
             transform.position = patrolPoints[0].position;
@@ -54,7 +56,8 @@ public class Robot : EnemyBase
         animator.SetTrigger("Death");
     }
     public void DisableObject()
-    {
+    {   
+       EnableHealthPickup();
         this.gameObject.SetActive(false);
     }
     void Patrol()
@@ -108,7 +111,7 @@ public class Robot : EnemyBase
         if (isplayerHit == true)
         {
           //  Debug.Log("Player hit by AI attack!");
-            onRobotHit?.Invoke();
+            onRobotHit?.Invoke(1);
         }
 
         // Debug visualization

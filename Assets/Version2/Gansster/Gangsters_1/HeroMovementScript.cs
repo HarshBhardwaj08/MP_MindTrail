@@ -37,6 +37,8 @@ public class HeroMovementScript : MonoBehaviour
     private bool isrun;
     [SerializeField] private bool isFlip;
     private bool isInvincible;
+    public delegate void HealthDelegate(int val);
+    public static event HealthDelegate healthDelegate;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -45,11 +47,12 @@ public class HeroMovementScript : MonoBehaviour
     private void OnEnable()
     {
         FireBallScripts.onfireBallHit += PlayerHurt;
-        TankBullets.onBulletHit += PlayerDeath;
-        Robot.onRobotHit += PlayerDeath;
-        DroneAI.onDroneHit += PlayerDeath;
+        TankBullets.onBulletHit += PlayerHurt;
+        Robot.onRobotHit += PlayerHurt;
+        DroneAI.onDroneHit += PlayerHurt;
         InvincibilityCells.cellPicked += Invincible;
-        MIne.onExplosion += PlayerDeath;
+        MIne.onExplosion += PlayerHurt;
+        HealthManager.OnHealthZero += PlayerDeath;
     }
 
     private void Invincible(bool obj)
@@ -60,11 +63,12 @@ public class HeroMovementScript : MonoBehaviour
     private void OnDisable()
     {
         FireBallScripts.onfireBallHit -= PlayerHurt;
-        TankBullets.onBulletHit -= PlayerDeath;
-        Robot.onRobotHit -= PlayerDeath;
-        DroneAI.onDroneHit -= PlayerDeath;
+        TankBullets.onBulletHit -= PlayerHurt;
+        Robot.onRobotHit -= PlayerHurt;
+        DroneAI.onDroneHit -= PlayerHurt;
         InvincibilityCells.cellPicked -= Invincible;
-        MIne.onExplosion -= PlayerDeath;
+        MIne.onExplosion -= PlayerHurt;
+        HealthManager.OnHealthZero -= PlayerDeath;
     }
 
     private void PlayerDeath()
@@ -78,8 +82,13 @@ public class HeroMovementScript : MonoBehaviour
     }
 
 
-    private void PlayerHurt()
+    private void PlayerHurt(int val)
     {
+        if (isInvincible == true)
+        {
+            return;
+        }
+        healthDelegate?.Invoke(val); 
         animator.SetTrigger("Hurt");
     }
 

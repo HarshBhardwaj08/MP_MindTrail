@@ -4,12 +4,12 @@ using UnityEngine;
 using System;
 public class TankBullets : MonoBehaviour
 {
-    public static event Action onBulletHit;
+    public static event Action<int> onBulletHit;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            onBulletHit?.Invoke();
+            onBulletHit?.Invoke(1);
         }
         Destroy(this.gameObject);
     }

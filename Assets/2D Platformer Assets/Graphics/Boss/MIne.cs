@@ -6,7 +6,7 @@ using UnityEngine;
 public class MIne : MonoBehaviour
 {
     [SerializeField] private Explosion explosion;
-    public static event Action onExplosion;
+    public static event Action<int> onExplosion;
     private void OnEnable()
     {
       
@@ -27,7 +27,7 @@ public class MIne : MonoBehaviour
         {
             // Get the SpriteRenderer component of the player
             Explode(); 
-            onExplosion?.Invoke();
+            onExplosion?.Invoke(2);
         }
     }
 }

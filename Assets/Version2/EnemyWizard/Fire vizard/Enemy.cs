@@ -55,7 +55,8 @@ public class Enemy : EnemyBase
         animator.SetTrigger("Death");
     }
     public void DisableObject()
-    {
+    {  
+        EnableHealthPickup();
         this.gameObject.SetActive(false);
     }
     private void OnDisable()
@@ -71,7 +72,8 @@ public class Enemy : EnemyBase
             SwordAttack();
         }
         else if (distanceToPlayer <= fireballRange)
-        {
+        { 
+            FacePlayer();
             ThrowFireball();
         }
         else
@@ -81,7 +83,18 @@ public class Enemy : EnemyBase
 
         UpdateAnimation(distanceToPlayer);
     }
-
+    void FacePlayer()
+    {
+        // Flip the enemy to face the player based on the player's position
+        if (player.position.x > transform.position.x && !movingRight)
+        {
+            Flip();
+        }
+        else if (player.position.x < transform.position.x && movingRight)
+        {
+            Flip();
+        }
+    }
     void Patrol()
     {
         if (isAttacking) return;

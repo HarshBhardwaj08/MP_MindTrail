@@ -10,11 +10,11 @@ public class DroneAI : EnemyBase
     public float detectionRadius = 5f;
     public float destroyRadius = 1f;
     [SerializeField] private Explosion explosion;
-    public static event Action onDroneHit;
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    public static event Action<int> onDroneHit;
+    private bool isPlayerHit;
+    private void Start()
     {
-      //  Debug.Log(collision.gameObject.name);
+        healthPickup.SetActive(false);
     }
     private void Explode()
     {
@@ -33,10 +33,12 @@ public class DroneAI : EnemyBase
             transform.position += (Vector3)direction * speed * Time.deltaTime;
 
             // Check if close enough to destroy
-            if (distanceToPlayer <= destroyRadius)
+            if (distanceToPlayer <= destroyRadius && isPlayerHit == false)
             {
-                onDroneHit?.Invoke();
+                onDroneHit?.Invoke(2);
                 Explode();
+                isPlayerHit = true;
+                EnableHealthPickup();
                 //DestroySelf();
             }
         }
