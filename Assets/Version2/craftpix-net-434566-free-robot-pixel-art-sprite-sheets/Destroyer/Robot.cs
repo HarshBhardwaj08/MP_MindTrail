@@ -21,10 +21,11 @@ public class Robot : EnemyBase
     private bool isAttacking = false;
     private float lastAttackTime = -Mathf.Infinity;
     public static event Action<int> onRobotHit;
-    
+    bool IsAlive = true;   
     void Start()
     {
         healthPickup.SetActive(false);
+        IsAlive = true;
         animator = GetComponent<Animator>();
         if (patrolPoints.Length > 0)
             transform.position = patrolPoints[0].position;
@@ -52,12 +53,15 @@ public class Robot : EnemyBase
     }
     public override void OnDamage()
     {
+        if(!IsAlive)  return; 
         Debug.Log(this.gameObject.name + "Damage Deducted");
         animator.SetTrigger("Death");
+        EnableHealthPickup();
+        IsAlive = false ;
     }
     public void DisableObject()
     {   
-       EnableHealthPickup();
+       
         this.gameObject.SetActive(false);
     }
     void Patrol()

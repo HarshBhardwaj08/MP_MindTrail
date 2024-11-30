@@ -113,11 +113,6 @@ public class HeroMovementScript : MonoBehaviour
         // Handle climbing
         HandleClimbing();
       
-        // Handle jump
-        if (Input.GetButtonDown("Jump"))
-        {
-            HandleJump();
-        }
         if(Input.GetMouseButtonDown(0))
         {
             animator.SetTrigger("Fire");
@@ -139,6 +134,11 @@ public class HeroMovementScript : MonoBehaviour
         {
             float moveSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
             rb.velocity = new Vector2(horizontalInput * moveSpeed*Time.deltaTime, rb.velocity.y);
+        }
+        // Handle jump
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            HandleJump();
         }
     }
     void SpawnBullets()
