@@ -98,8 +98,7 @@ public class HeroMovementScript : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        // Check if grounded
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+       
 
         if (isGrounded)
         {
@@ -125,20 +124,33 @@ public class HeroMovementScript : MonoBehaviour
         }
         // Update animations
         UpdateAnimations();
-    }
 
+        // Handle jump
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Space");
+
+            HandleJump();
+        }
+    }
     private void FixedUpdate()
     {
         // Apply horizontal movement
         if (!isClimbing)
         {
             float moveSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
-            rb.velocity = new Vector2(horizontalInput * moveSpeed*Time.deltaTime, rb.velocity.y);
+            rb.velocity = new Vector2(horizontalInput * moveSpeed * Time.deltaTime, rb.velocity.y);
         }
-        // Handle jump
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        // Check if grounded
+        bool wasGrounded = isGrounded;
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+        // Ground buffer logic to prevent jump inconsistency
+        if (!wasGrounded && isGrounded)
         {
-            HandleJump();
+            jumpCount = 0; // Reset jump count when landing
+            isJUmp = false;
         }
     }
     void SpawnBullets()
@@ -179,11 +191,18 @@ public class HeroMovementScript : MonoBehaviour
 
     private void HandleJump()
     {
-        if (isGrounded == true|| jumpCount < maxJumpCount)
+        Debug.Log($"Jump Attempt: isGrounded={isGrounded}, jumpCount={jumpCount}");
+
+        // Allow jumping if grounded or jump count is within allowed range
+        if (isGrounded || jumpCount < maxJumpCount)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce*Time.deltaTime);
-           
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             jumpCount++;
+            Debug.Log($"Jump Successful: jumpCount={jumpCount}");
+        }
+        else
+        {
+            Debug.Log("Jump Failed: Not grounded or jump limit reached");
         }
     }
 

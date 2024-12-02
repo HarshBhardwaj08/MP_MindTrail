@@ -29,5 +29,15 @@ public class CrankLever : MonoBehaviour
         }
        
     }
+    private void FixedUpdate()
+    {
+        // Handle jump
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Spacing");
 
+           
+        }
+    }
 }
+
