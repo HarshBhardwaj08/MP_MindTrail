@@ -53,6 +53,7 @@ public class DroneAI : EnemyBase
     public override void OnDamage()
     {
         Debug.Log(this.gameObject.name + "Damage Deducted");
+        EnableHealthPickup();
         Explode();
     }
     void OnDrawGizmos()

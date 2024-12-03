@@ -38,17 +38,9 @@ public class Enemy : EnemyBase
     }
     private void OnEnable()
     {
-        Bullet.onBulletHit += HurtEnemy;
+        
     }
 
-    private void HurtEnemy()
-    {
-        enemyHealth--;
-        if(enemyHealth < 0)
-        {
-            animator.SetTrigger("Death");
-        }
-    }
     public override void OnDamage()
     {
         Debug.Log("Damage Deducted");
@@ -61,7 +53,7 @@ public class Enemy : EnemyBase
     }
     private void OnDisable()
     {
-        Bullet.onBulletHit -= HurtEnemy;
+      
     }
     void Update()
     {
