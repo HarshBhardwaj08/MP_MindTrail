@@ -7,7 +7,7 @@ using UnityEngine;
 public class InvincibilityCells : MonoBehaviour
 {
     public GameObject cellIcon;
-    public TextMeshProUGUI timer;
+
     public static event Action<bool> cellPicked;
     public float invincibleTime = 10.0f;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -18,7 +18,8 @@ public class InvincibilityCells : MonoBehaviour
             cellIcon.SetActive(true);
             cellPicked?.Invoke(true);
             StartCoroutine(ApplyInvincibility(collision.gameObject,invincibleTime));
-             this.gameObject.SetActive(false);
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
     private IEnumerator ApplyInvincibility(GameObject player,float invincibletime)
@@ -31,15 +32,15 @@ public class InvincibilityCells : MonoBehaviour
             Color color = playerSprite.color;
             color.a = 160f / 255f;
             playerSprite.color = color;
-            timer.text = Time.time.ToString();
             // Wait for 10 seconds
             yield return new WaitForSeconds(invincibletime);
-
             // Reset alpha to normal (1f for full opacity)
             color.a = 1f;
             cellIcon.SetActive(false);
             cellPicked?.Invoke(false);
             playerSprite.color = color;
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            this.gameObject.GetComponent<BoxCollider2D>().enabled = true;
         }
     }
 }

@@ -11,6 +11,6 @@ public class TankBullets : MonoBehaviour
         {
             onBulletHit?.Invoke(1);
         }
-        Destroy(this.gameObject);
+            Destroy(this.gameObject);
     }
 }
